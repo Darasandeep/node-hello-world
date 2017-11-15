@@ -1,13 +1,15 @@
 pipeline {
-    def app
-
     stages {
         stage('Clone') {
-            checkout scm
+            steps {
+                checkout scm
+            }
         }
 
         stage('Build') {
-            app = docker.build('marchie/node-hello-world')
+            steps {
+                app = docker.build('marchie/node-hello-world')
+            }
         }
 
         stage('Test') {
