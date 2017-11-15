@@ -1,22 +1,10 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
 
     stages {
-        stage('Clone') {
+        stage('Foo') {
             steps {
-                checkout scm
-            }
-        }
-
-        stage('Build') {
-            steps {
-                app = docker.build('marchie/node-hello-world')
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'npm run test'
+                echo 'Hello'
             }
         }
     }
