@@ -1,6 +1,8 @@
 pipeline {
-    ansiColor('xterm') {
-        agent { dockerfile true }
+    agent {
+        ansiColor('xterm') {
+            dockerfile true
+        }
     }
 
     stages {
