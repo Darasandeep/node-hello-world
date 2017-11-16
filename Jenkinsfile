@@ -1,14 +1,12 @@
 pipeline {
     agent {
-        ansiColor('xterm') {
-            dockerfile true
-        }
+        dockerfile true
     }
 
     stages {
         stage('Foo') {
             steps {
-                echo 'Hello'
+                sh 'npm run test'
             }
         }
     }
