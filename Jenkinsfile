@@ -1,5 +1,7 @@
 pipeline {
-    agent { dockerfile true }
+    ansiColor('xterm') {
+        agent { dockerfile true }
+    }
 
     stages {
         stage('Foo') {
