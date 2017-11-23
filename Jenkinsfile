@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'npm run unitTests'
-                sh 'Analyse code coverage'
+                sh 'echo "Analyse code coverage"'
                 sh 'npm run lint'
                 sh 'npm run integrationTests'
                 sh 'npm run acceptanceTests'
