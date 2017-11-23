@@ -4,7 +4,10 @@
   "description": "A Hello World HTTP server",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "acceptanceTests": "echo \"Running acceptance tests from NPM\" && exit 0",
+    "integrationTests": "echo \"Runnng integration tests from NPM\" && exit 0",
+    "lint": "echo \"Running linter from NPM\" && exit 0",
+    "unitTests": "echo \"Running unit tests from NPM\" && exit 0",
     "start": "node main.js"
   },
   "repository": {
